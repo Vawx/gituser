@@ -62,14 +62,12 @@ $(document).ready(function() {
   });
 
   function userDataCallback( gitObject ) {
-    console.log(gitObject);
     if(gitObject !== null) {
       $("#user-well").attr("class", "well");
       $("#real-name").find("#website").text(gitObject[dataResponse.NAME]);
       $("#real-name").find("#website").attr("href", gitObject[dataResponse.WEBSITE]);
       $("#real-name").find("#avatar").attr("src", gitObject[dataResponse.AVATAR_URL]);
       $("#real-name").find("#avatar").attr("class", "img-thumbnail");
-
       gitUserRepositories(gitObject[dataResponse.REPOS_URL], userReposCallback);
     }
   }
