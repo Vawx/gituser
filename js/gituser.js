@@ -41,4 +41,4 @@ exports.getUserRepositories = function( url, reposCallback )
       reposCallback(userRepos);
     }
   });
-}
+};

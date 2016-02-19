@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   function userDataCallback( gitObject ) {
     console.log(gitObject);
-    if(gitObject != null) {
+    if(gitObject !== null) {
       $("#user-well").attr("class", "well");
       $("#real-name").find("#website").text(gitObject[dataResponse.NAME]);
       $("#real-name").find("#website").attr("href", gitObject[dataResponse.WEBSITE]);
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
       gitUserRepositories(gitObject[dataResponse.REPOS_URL], userReposCallback);
     }
-  };
+  }
 
   function userReposCallback( repos ) {
     for(var i = 0; i < repos.length; i++) {
@@ -32,8 +32,8 @@ $(document).ready(function() {
       infoClone.find("#repo-name").text(repos[i].name);
       infoClone.find("#repo-language").text(repos[i].language);
       infoClone.find("#repo-url").text("URL");
-      infoClone.find("#repo-url").attr("src", repos[i].url)
-      infoClone.find("#repo-clone").text("Clone URL")
+      infoClone.find("#repo-url").attr("src", repos[i].url);
+      infoClone.find("#repo-clone").text("Clone URL");
       infoClone.find("#repo-clone").attr("src", repos[i].clone);
       infoClone.find("#repo-well").attr("class", "well");
 
@@ -41,5 +41,5 @@ $(document).ready(function() {
       infoClone.appendTo("#repositories");
       $("#repositories").append("</li>");
     }
-  };
+ }
 });
