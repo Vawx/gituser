@@ -10,6 +10,7 @@ $(document).ready(function() {
   };
 
   $("#user-submit").on('click', function() {
+    $("#repositories").empty( );
     var gitObject = gitUserData($("#username").val(), userDataCallback);
   });
 
