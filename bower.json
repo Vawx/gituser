@@ -1,0 +1,21 @@
+{
+  "name": "gituser",
+  "description": "Get Git user repository informatio",
+  "main": "index.js",
+  "authors": [
+    "Kyle Langley"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0"
+  }
+}
