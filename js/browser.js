@@ -31,9 +31,9 @@ $(document).ready(function() {
       infoClone.find("#repo-name").text(repos[i].name);
       infoClone.find("#repo-language").text(repos[i].language);
       infoClone.find("#repo-url").text("URL");
-      infoClone.find("#repo-url").attr("src", repos[i].url);
+      infoClone.find("#repo-url").attr("href", repos[i].url);
       infoClone.find("#repo-clone").text("Clone URL");
-      infoClone.find("#repo-clone").attr("src", repos[i].clone);
+      infoClone.find("#repo-clone").attr("href", repos[i].clone);
       infoClone.find("#repo-well").attr("class", "well");
 
       $("#repositories").append("<li>");

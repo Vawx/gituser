@@ -18,6 +18,10 @@ exports.getUserData = function( userName, userCallback )
       success: function (data)
       {
         userData.push(data.name);
+        if(data.blog[4] !== "http") {
+          var endBlogUrl = data.blog;
+          data.blog = "http://" + endBlogUrl;
+        }
         userData.push(data.blog);
         userData.push(data.avatar_url);
         userData.push(data.repos_url);
