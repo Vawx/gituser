@@ -5,11 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="build/css/styles.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="build/js/app.js"></script>
     <title>Git User</title>
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Git User</h1>
+        <p>Find Git user repositories!</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="box">
+        <label for="location">Enter a user name</label>
+        <input type="text" id="username">
+        <button class="button btn-success" id="user-submit">Get user repositories!</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div class="row">
+          <div class="well hidden" id="user-well">
+            <div class="row">
+              <div class="col-xs-8 col-xs-offset-4">
+                <div class="row">
+                  <h1 id="real-name">
+                    <img class="hidden" src="" alt="" id="avatar" width="15%" height="15%"/>
+                    <a href="" id="website" target="_blank"></a>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul id="repositories">
+      </ul>
+    </div>
+    <div class="row" id="repo-info">
+      <div class="container">
+        <div class="col-xs-6 col-xs-offset-3">
+          <h1 id="repo-name" style="text-align:center;"></h1>
+          <div class="well hidden" id="repo-well">
+            <div class="row">
+              <div class="col-xs-4">
+                <h3 id="repo-language"></h3>
+              </div>
+              <div class="col-xs-4">
+                <h3><a href="" id="repo-url" target="_blank"></a></h3>
+              </div>
+              <div class="col-xs-4">
+                <h3><a href="" id="repo-clone" taget="_blank"></a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
